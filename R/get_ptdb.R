@@ -1,8 +1,8 @@
 #' @title Retrieve the Parrot Traits Database
-#' @description Provides two options for retrieving and pulling into memory the Parrot Traits Database (PTB). The first and default option is to use the data stored in the package (`r data(ptb)`).
+#' @description Provides two options for retrieving and pulling into memory the Parrot Traits Database (PTDB). The first and default option is to use the data stored in the package (`r data(ptb)`).
 #' @param
 
-get_ptb <- function() {
+get_ptdb <- function() {
   # Load in the raw, very raw data (last upload 20200826)
   ptb.raw <- readr::read_csv(here::here("data-raw/parrot-traits-database.csv"), skip=1)
     ## these columns really need to be fixed, especially the duplicated names...
