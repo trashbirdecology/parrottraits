@@ -5,6 +5,9 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/badge.svg)](https://github.com/trashbirdecology/parrottraits/actions)
+<https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg>
 <!-- badges: end -->
 
 The goal of parrottraits is to …

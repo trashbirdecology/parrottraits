@@ -1,0 +1,16 @@
+citHeader("To cite parrottraits in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "temp",
+  author   = "temp",
+  journal  = "temp",
+  year     = "temp",
+  volume   = "temp",
+  number   = "temp",
+  pages    = "temp",
+  url      = "temp",
+  textVersion = paste(
+"temp"
+  )
+)
