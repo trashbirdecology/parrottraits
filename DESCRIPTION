@@ -1,10 +1,10 @@
 Package: parrottraits
 Type: Package
-Title: Retrieving and Interacting with the Ultimate Parrot Traits Database (PTB)
+Title: Retrieving and Interacting with the Ultimate Parrot Traits Database (PTDB)
 Version: 0.0.1
 Author: Jessica Burnett
 Maintainer: Jessica Burnett <jburnett@usgs.gov>
-Description: This package provides the updated version of the PTB...
+Description: This package provides the updated version of the PTDB and provides functionality for interacting with it. 
 License: CC0
 Encoding: UTF-8
 LazyData: true
