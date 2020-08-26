@@ -1,5 +1,23 @@
 url: https://trashbirdecology.github.io/parrottraits/
 
+
+authors:
+  Jessica Burnett:
+    href: https://github.com/trashbirdecology
+
 home:
-  title: PTDB
-  description: A PTDB
+  title: An R package
+  description: Blhalbhalbhb
+
+template:
+  params:
+    ganalytics:
+
+repo:
+  url:
+    home: https://github.com/trashbirdecology/parrottraits
+    source: https://github.com/trashbirdecology/parrottraits/blob/main/
+    issue: https://github.com/trashbirdecology/parrottraits/issues
+
+development:
+  mode: auto
