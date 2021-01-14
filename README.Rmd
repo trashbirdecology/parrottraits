@@ -26,19 +26,17 @@ knitr::opts_chunk$set(
 
 Install the development version from [GitHub](https://github.com/) with:
 
-``` r
+```{r}
 # install.packages("devtools")
 devtools::install_github("trashbirdecology/parrottraits")
 ```
-<!-- ## Example -->
 
 
-
-<!-- ```{r example} -->
-<!-- library(parrottraits) -->
-
-<!-- ``` -->
-
+## To cite the Parrot Traits database or companion R package (\code{parrottraits})
+```{r citation, echo=TRUE, eval=TRUE}
+citation("parrottraits")[1] # data article
+citation("parrottraits")[2] # R package 
+```
 
 ## Code of Conduct
 Please note that the parrottraits project is released with a [Contributor Code of Conduct](https://trashbirdecology.github.io/parrottraits//CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
