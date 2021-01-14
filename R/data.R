@@ -16,7 +16,7 @@
 "traits"
 
 
-# data ifnormation form the burgio et al. data paper
+# data and information from the burgio et al. data paper
 # from teh figshare files,,, https://figshare.com/s/6cdf8cf00793deab7ba6
 # Data compiled from:
 #
@@ -31,4 +31,34 @@
 #
 #
 #
+
+
+# original traits and tree data -------------------------------------------
+#' Originally published Parrot Trait Database from Burgio et al. (2018)
+#'
+#' Description as published in [FigShare](https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6):
+#' "We present a complete dataset from the literature on functional traits including morphological measurements, dietary information, foraging strategy, and foraging location for all 398 extant species of parrots. The morphological measurements include: mass as well as total length, wing chord, culmen, tarsus, and tail length. The diet data describe whether each species is known to consume particular food items (e.g. nectar, berries, and carrion), foraging strategy data describes how each species captures or accesses food, and foraging location describes the habitat from which each species finds food (e.g. ground, canopy, and subcanopy). We also present a time-calibrated phylogenetic supertree that contains all 398 extant species as well as 15 extinct species (413 total species)."
+#'
+#' @format A data frame with 414 rows (species) and 180 variables (traits and taxonomic information:
+#' @title Retrieve and unpack original trait database
+#' @description  This data is a copy of the original and static instance of the Burgio et al. Parrot Traits database and Supertree
+#' @source \url{https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6}
+#' @usage data("traits.original)
+
+"traits.original"
+
+# parrot.tree -------------------------------------------------------------
+#' Originally published Parrot phylogenetic tree as published at Burgio et al. (2018)
+#'
+#' Description as published in [FigShare](https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6):
+#' "We present a complete dataset from the literature on functional traits including morphological measurements, dietary information, foraging strategy, and foraging location for all 398 extant species of parrots. The morphological measurements include: mass as well as total length, wing chord, culmen, tarsus, and tail length. The diet data describe whether each species is known to consume particular food items (e.g. nectar, berries, and carrion), foraging strategy data describes how each species captures or accesses food, and foraging location describes the habitat from which each species finds food (e.g. ground, canopy, and subcanopy). We also present a time-calibrated phylogenetic supertree that contains all 398 extant species as well as 15 extinct species (413 total species)."
+#' @usage data("parrot.tree")
+#' @format
+#' @source \url{https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6}
+
+"parrot.tree"
+
+
+# End data ----------------------------------------------------------------
+
 
