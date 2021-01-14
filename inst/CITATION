@@ -1,5 +1,4 @@
 citHeader("To cite the Parrot Traits database and information in publications use:")
-
 citEntry(
   entry    = "Article",
   title    = "Phylogenetic supertree and functional trait database for all extant parrots.",
@@ -14,9 +13,7 @@ citEntry(
   )
 )
 
-
 citHeader("To cite parrottraits R package in publications use:")
-
 citEntry(
   entry    = "Misc",
   title    = "parrottraits: an R package for interfacing with the Parrot Traits Database",

@@ -1,8 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# parrottraits
-
 <!-- badges: start -->
 
 [![R build
@@ -10,7 +8,38 @@ status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/b
 <https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg>
 <!-- badges: end -->
 
-…
+# About 
+
+**To cite the Parrot Traits database or companion R package ()**
+
+    #> 
+    #>   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,
+    #>   Klingbeil, B. T., Presley, S. J., & Willig, M. R. (2019).
+    #>   Phylogenetic supertree and functional trait database for all extant
+    #>   parrots. Data in brief, 24, 103882.
+    #> 
+    #> A BibTeX entry for LaTeX users is
+    #> 
+    #>   @Article{,
+    #>     title = {Phylogenetic supertree and functional trait database for all extant parrots.},
+    #>     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and & Willig and M. R.},
+    #>     journal = {Data in brief},
+    #>     year = {2019},
+    #>     volume = {24},
+    #>     number = {103882},
+    #>     url = {https://www.sciencedirect.com/science/article/pii/S2352340919302331},
+    #>   }
+    #> 
+    #>   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for
+    #>   interfacing with the Parrot Traits Database
+    #> 
+    #> A BibTeX entry for LaTeX users is
+    #> 
+    #>   @Misc{,
+    #>     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},
+    #>     author = {{Burnett} and {J.L.} and K.R. Burgio},
+    #>     url = {https://github.com/trashbirdecology/parrottraits/},
+    #>   }
 
 ## Installation
 
@@ -18,44 +47,7 @@ Install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("trashbirdecology/parrottraits")
-#> Downloading GitHub repo trashbirdecology/parrottraits@HEAD
-#> 
-#>      checking for file ‘/private/var/folders/3v/zx6w0ktx5m13_06d5ncvn50r58gj13/T/Rtmpkm1ahg/remotesd1fc100095ef/trashbirdecology-parrottraits-276f8b9/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/3v/zx6w0ktx5m13_06d5ncvn50r58gj13/T/Rtmpkm1ahg/remotesd1fc100095ef/trashbirdecology-parrottraits-276f8b9/DESCRIPTION’
-#>   ─  preparing ‘parrottraits’:
-#>   ✓  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘parrottraits_0.0.1.tar.gz’
-#>      Warning: invalid uid value replaced by that for user 'nobody'
-#>    Warning: invalid gid value replaced by that for user 'nobody'
-#>      
-#> 
-#> Installing package into '/Users/jburnett/Library/R/4.0/library'
-#> (as 'lib' is unspecified)
-```
-
-## To cite the Parrot Traits database or companion R package ()
-
-``` r
-citation("parrottraits")[1] # data article
-#> 
-#>   temp
-#> 
-#> A BibTeX entry for LaTeX users is
-#> 
-#>   @Article{,
-#>     title = {temp},
-#>     author = {{temp}},
-#>     journal = {temp},
-#>     year = {temp},
-#>     volume = {temp},
-#>     number = {temp},
-#>     pages = {temp},
-#>     url = {temp},
-#>   }
-citation("parrottraits")[2] # R package 
-#> Warning in `[.bibentry`(citation("parrottraits"), 2): subscript out of bounds
+devtools::install_github("trashbirdecology/parrottraits", force=FALSE)
 ```
 
 ## Code of Conduct

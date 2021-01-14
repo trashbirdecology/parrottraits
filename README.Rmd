@@ -4,6 +4,13 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+[![R build status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/badge.svg)](https://github.com/trashbirdecology/parrottraits/actions)
+[![experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
+<!-- badges: end -->
+
+
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -13,30 +20,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-# parrottraits
+# About \code{parrottraits}
+__To cite the Parrot Traits database or companion R package (\code{parrottraits})__
+```{r citation, echo=FALSE, eval=TRUE}
+citation("parrottraits")[1] # data article
+citation("parrottraits")[2] # R package 
+```
 
-<!-- badges: start -->
-[![R build status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/badge.svg)](https://github.com/trashbirdecology/parrottraits/actions)
-[![experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
-<!-- badges: end -->
-
-...
 
 ## Installation
 
 Install the development version from [GitHub](https://github.com/) with:
 
-```{r}
+```{r install-packages, echo=TRUE, eval=FALSE}
 # install.packages("devtools")
-devtools::install_github("trashbirdecology/parrottraits")
+devtools::install_github("trashbirdecology/parrottraits", force=FALSE)
 ```
 
 
-## To cite the Parrot Traits database or companion R package (\code{parrottraits})
-```{r citation, echo=TRUE, eval=TRUE}
-citation("parrottraits")[1] # data article
-citation("parrottraits")[2] # R package 
-```
 
 ## Code of Conduct
 Please note that the parrottraits project is released with a [Contributor Code of Conduct](https://trashbirdecology.github.io/parrottraits//CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
