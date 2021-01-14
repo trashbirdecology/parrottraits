@@ -19,15 +19,44 @@ Install the development version from [GitHub](https://github.com/) with:
 ``` r
 # install.packages("devtools")
 devtools::install_github("trashbirdecology/parrottraits")
+#> Downloading GitHub repo trashbirdecology/parrottraits@HEAD
+#> 
+#>      checking for file ‘/private/var/folders/3v/zx6w0ktx5m13_06d5ncvn50r58gj13/T/Rtmpkm1ahg/remotesd1fc100095ef/trashbirdecology-parrottraits-276f8b9/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/3v/zx6w0ktx5m13_06d5ncvn50r58gj13/T/Rtmpkm1ahg/remotesd1fc100095ef/trashbirdecology-parrottraits-276f8b9/DESCRIPTION’
+#>   ─  preparing ‘parrottraits’:
+#>   ✓  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘parrottraits_0.0.1.tar.gz’
+#>      Warning: invalid uid value replaced by that for user 'nobody'
+#>    Warning: invalid gid value replaced by that for user 'nobody'
+#>      
+#> 
+#> Installing package into '/Users/jburnett/Library/R/4.0/library'
+#> (as 'lib' is unspecified)
 ```
 
-<!-- ## Example -->
+## To cite the Parrot Traits database or companion R package ()
 
-<!-- ```{r example} -->
-
-<!-- library(parrottraits) -->
-
-<!-- ``` -->
+``` r
+citation("parrottraits")[1] # data article
+#> 
+#>   temp
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Article{,
+#>     title = {temp},
+#>     author = {{temp}},
+#>     journal = {temp},
+#>     year = {temp},
+#>     volume = {temp},
+#>     number = {temp},
+#>     pages = {temp},
+#>     url = {temp},
+#>   }
+citation("parrottraits")[2] # R package 
+#> Warning in `[.bibentry`(citation("parrottraits"), 2): subscript out of bounds
+```
 
 ## Code of Conduct
 

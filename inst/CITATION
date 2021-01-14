@@ -3,7 +3,7 @@ citHeader("To cite the Parrot Traits database and information in publications us
 citEntry(
   entry    = "Article",
   title    = "Phylogenetic supertree and functional trait database for all extant parrots.",
-  author   = "Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M., Klingbeil, B. T., Presley, S. J., & Willig, M. R.",
+  author   = "K R Burgio and K E Davis and L M Dreiss and L M Cisneros and B T Klingbeil and S J Presley and M R Willig",
   journal  = "Data in brief",
   year     = "2019",
   volume   = "24",
@@ -20,7 +20,7 @@ citHeader("To cite parrottraits R package in publications use:")
 citEntry(
   entry    = "Misc",
   title    = "parrottraits: an R package for interfacing with the Parrot Traits Database",
-  author   = "Burnett, J.L. and K.R. Burgio",
+  author   = "J L Burnett and K R Burgio",
   url      = "https://github.com/trashbirdecology/parrottraits/",
   textVersion = paste(
 "Burnett, J.L. and K.R. Burgio. parrottraits: an R package for interfacing with the Parrot Traits Database"
