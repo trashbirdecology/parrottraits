@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 1.5.1
+pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-08-26T19:44Z
+articles: {}
+last_built: 2021-01-14T17:58Z
 urls:
   reference: https://trashbirdecology.github.io/parrottraits//reference
   article: https://trashbirdecology.github.io/parrottraits//articles
