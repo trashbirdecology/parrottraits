@@ -9,8 +9,6 @@ output: github_document
 [![experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
 <!-- badges: end -->
 
-
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -20,13 +18,31 @@ knitr::opts_chunk$set(
 )
 ```
 
-# About \code{parrottraits}
+## About \code{parrottraits}
+
+The parrottraits R package provides the Parrot Trait Database, originally published in Burgio et al. (2018), as an internal data object, and provides minimal functionality for munging, visualizing, and interfacing with the data.
+
+Planned functionality for \{code{parrottraits}} includes:  
+- simple statistics and visualizations of both the traits database the phylogenetic supertree, as originally published in Burio et al. (2018)
+- simple visualizations of trait distribution
+- spatial distribution of traits over space
+- integrating the taxonomic information used in the traits dataabase and supertree with other taxonomies
+
+## Examples
+Load traits database into the workspace:
+```{r load-data}
+data("traits")
+dim(traits) # contains ~MANY~ traits  (columns!)
+```
+
+
+
+## Citations
 __To cite the Parrot Traits database or companion R package (\code{parrottraits})__
 ```{r citation, echo=FALSE, eval=TRUE}
 citation("parrottraits")[1] # data article
 citation("parrottraits")[2] # R package 
 ```
-
 
 ## Installation
 
@@ -36,8 +52,6 @@ Install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("trashbirdecology/parrottraits", force=FALSE)
 ```
-
-
 
 ## Code of Conduct
 Please note that the parrottraits project is released with a [Contributor Code of Conduct](https://trashbirdecology.github.io/parrottraits//CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

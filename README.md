@@ -8,7 +8,31 @@ status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/b
 <https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg>
 <!-- badges: end -->
 
-# About 
+## About 
+
+The parrottraits R package provides the Parrot Trait Database,
+originally published in Burgio et al. (2018), as an internal data
+object, and provides minimal functionality for munging, visualizing, and
+interfacing with the data.
+
+Planned functionality for {code{parrottraits}} includes:  
+\- simple statistics and visualizations of both the traits database the
+phylogenetic supertree, as originally published in Burio et al. (2018) -
+simple visualizations of trait distribution - spatial distribution of
+traits over space - integrating the taxonomic information used in the
+traits dataabase and supertree with other taxonomies
+
+## Examples
+
+Load data objects into the workspace:
+
+``` r
+data("traits")
+dim(traits)
+#> [1] 414 180
+```
+
+## Citations
 
 **To cite the Parrot Traits database or companion R package ()**
 

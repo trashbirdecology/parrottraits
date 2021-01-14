@@ -7,9 +7,3 @@ traits <- readr::read_csv(here::here("data-raw/parrot-traits-database.csv"), ski
 
 # Update .rda data file ---------------------------------------------------
 usethis::use_data(traits, overwrite = TRUE)
-
-
-
-# End run -----------------------------------------------------------------
-
-
