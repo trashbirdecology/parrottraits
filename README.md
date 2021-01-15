@@ -11,14 +11,18 @@
 The R package, , provides quick access to the most recent version of the
 Parrot Traits Database, originally published in [Burgio et al.
 (2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331),
-and the original version. The Parrot Traits Database will be updated as
-new information becomes available. All are welcome to contribute new
-functional trait information, or suggest edits as necessary.
+and also includes the originally published version. The Parrot Traits
+Database will be updated as new information becomes available. All are
+welcome to contribute new functional trait information, or suggest edits
+as necessary. For information on functional data collection and
+phylogenetic super tree estimation, please see the [superceding data
+article, Burgio et al.
+(2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331).
 
 In additon to the data, this package also provides minimal functionality
 for munging, visualizing, and interfacing with Parrot Trait Database.
 
-**Planned functionality**
+### Planned functionality for package
 
   - simple statistics and visualizations of both the traits database the
     phylogenetic supertree, as originally published in Burio et al.
@@ -27,6 +31,8 @@ for munging, visualizing, and interfacing with Parrot Trait Database.
   - distribution of traits over space
   - integrating the taxonomic information used in the traits dataabase
     and supertree with other taxonomies
+
+## Usage
 
 Load the most current version of the Parrot Traits database into
 workspace:
@@ -62,7 +68,7 @@ To see what other data objects are available for import:
 data(package="parrottraits")
 ```
 
-## Citations
+### Citing the package and database
 
 **To cite this R package and explicitly updated versions of the Parrot
 Traits database, please use:**

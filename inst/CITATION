@@ -17,9 +17,9 @@ citHeader("To cite parrottraits R package in publications use:")
 citEntry(
   entry    = "Misc",
   title    = "parrottraits: an R package for interfacing with the Parrot Traits Database",
-  author   = "J L Burnett and K R Burgio",
+  author   = "Jessica L Burnett and Kevin R Burgio",
   url      = "https://github.com/trashbirdecology/parrottraits/",
   textVersion = paste(
-"Burnett, J.L. and K.R. Burgio. parrottraits: an R package for interfacing with the Parrot Traits Database"
+"Jessica L. Burnett and Kevin R. Burgio. `parrottraits`: an R package for interfacing with the Parrot Traits Database"
   )
 )
