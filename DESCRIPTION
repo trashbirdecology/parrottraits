@@ -1,6 +1,6 @@
 Package: parrottraits
 Type: Package
-Title: Retrieving and Interacting with the Ultimate Parrot Traits Database 
+Title: an R package for interfacing with the Parrot Traits Database
 Version: 0.0.1
 Authors@R: c(
     person("Jessica", "Burnett", email = "jburnett@usgs.gov", role = "cre"),
