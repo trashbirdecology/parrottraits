@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(parrottraits)
 ```
 
 <!-- badges: start -->
@@ -19,20 +20,21 @@ knitr::opts_chunk$set(
 
 ## About 
 
-The parrottraits R package provides the Parrot Trait Database, originally published in Burgio et al. (2018), as an internal data object, and provides minimal functionality for munging, visualizing, and interfacing with the data.
+The R package, \code{parrottraits}, provides quick access to the most recent version of the Parrot Traits Database, originally published in [Burgio et al. (2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331), and the original version. The Parrot Traits Database will be updated as new information becomes available. All are welcome to contribute new functional trait information, or suggest edits as necessary. 
 
-Future functionality for \{code{parrottraits}} includes:    
+In additon to the data, this package also provides minimal functionality for munging, visualizing, and interfacing with Parrot Trait Database.
+
+__Planned functionality__
+
 - simple statistics and visualizations of both the traits database the phylogenetic supertree, as originally published in Burio et al. (2018)
 - simple visualizations of trait distribution 
 - distribution of traits over space 
 - integrating the taxonomic information used in the traits dataabase and supertree with other taxonomies
 
-## Examples
-
 Load the most current version of the Parrot Traits database into  workspace:
 ```{r, echo=TRUE, eval=TRUE}
 data("traits")
-# str(traits)
+dim(traits)
 ```
 
 ```{r, include=FALSE}
@@ -42,12 +44,16 @@ n = length(setdiff(traits$taxon, traits_original$`Traits with inferred values`$s
 
 This package defaults to the most recent version of the Parrot Traits database ("traits"), which contains `r print(n)` species that are not available in the original data. 
 ```{r} 
-# load the originallly published data
+# load the originallly published functional trait database
 data("traits_original")
 # see which species in the most recent version of "traits" were not originally published
 sort(setdiff(traits$taxon, traits_original$`Traits with inferred values`$species))
 ```
 
+To see what other data objects are available for import:
+```{r, echo=TRUE, eval=FALSE}
+data(package="parrottraits")
+```
 
 
 

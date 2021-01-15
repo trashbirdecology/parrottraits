@@ -8,26 +8,33 @@
 
 ## About
 
-The parrottraits R package provides the Parrot Trait Database,
-originally published in Burgio et al. (2018), as an internal data
-object, and provides minimal functionality for munging, visualizing, and
-interfacing with the data.
+The R package, , provides quick access to the most recent version of the
+Parrot Traits Database, originally published in [Burgio et al.
+(2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331),
+and the original version. The Parrot Traits Database will be updated as
+new information becomes available. All are welcome to contribute new
+functional trait information, or suggest edits as necessary.
 
-Future functionality for {code{parrottraits}} includes:  
-\- simple statistics and visualizations of both the traits database the
-phylogenetic supertree, as originally published in Burio et al. (2018) -
-simple visualizations of trait distribution - distribution of traits
-over space - integrating the taxonomic information used in the traits
-dataabase and supertree with other taxonomies
+In additon to the data, this package also provides minimal functionality
+for munging, visualizing, and interfacing with Parrot Trait Database.
 
-## Examples
+**Planned functionality**
+
+  - simple statistics and visualizations of both the traits database the
+    phylogenetic supertree, as originally published in Burio et al.
+    (2018)
+  - simple visualizations of trait distribution
+  - distribution of traits over space
+  - integrating the taxonomic information used in the traits dataabase
+    and supertree with other taxonomies
 
 Load the most current version of the Parrot Traits database into
 workspace:
 
 ``` r
 data("traits")
-# str(traits)
+dim(traits)
+#> [1] 414 180
 ```
 
 This package defaults to the most recent version of the Parrot Traits
@@ -35,7 +42,7 @@ database (“traits”), which contains species that are not available in
 the original data.
 
 ``` r
-# load the originallly published data
+# load the originallly published functional trait database
 data("traits_original")
 # see which species in the most recent version of "traits" were not originally published
 sort(setdiff(traits$taxon, traits_original$`Traits with inferred values`$species))
@@ -47,6 +54,12 @@ sort(setdiff(traits$taxon, traits_original$`Traits with inferred values`$species
 #> [11] "Necropsittacus rodricanus"  "Nestor productus"          
 #> [13] "Psephotellus pulcherrimus"  "Psittacara labati"         
 #> [15] "Psittacula exsul"           "Psittacula wardi"
+```
+
+To see what other data objects are available for import:
+
+``` r
+data(package="parrottraits")
 ```
 
 ## Citations
