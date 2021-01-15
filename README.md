@@ -3,67 +3,95 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/badge.svg)](https://github.com/trashbirdecology/parrottraits/actions)
-<https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg>
+![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 <!-- badges: end -->
 
-## About 
+## About
 
 The parrottraits R package provides the Parrot Trait Database,
 originally published in Burgio et al. (2018), as an internal data
 object, and provides minimal functionality for munging, visualizing, and
 interfacing with the data.
 
-Planned functionality for {code{parrottraits}} includes:  
+Future functionality for {code{parrottraits}} includes:  
 \- simple statistics and visualizations of both the traits database the
 phylogenetic supertree, as originally published in Burio et al. (2018) -
-simple visualizations of trait distribution - spatial distribution of
-traits over space - integrating the taxonomic information used in the
-traits dataabase and supertree with other taxonomies
+simple visualizations of trait distribution - distribution of traits
+over space - integrating the taxonomic information used in the traits
+dataabase and supertree with other taxonomies
 
 ## Examples
 
-Load data objects into the workspace:
+Load the most current version of the Parrot Traits database into
+workspace:
 
 ``` r
 data("traits")
-dim(traits)
-#> [1] 414 180
+# str(traits)
+```
+
+This package defaults to the most recent version of the Parrot Traits
+database (“traits”), which contains species that are not available in
+the original data.
+
+``` r
+# load the originallly published data
+data("traits_original")
+# see which species in the most recent version of "traits" were not originally published
+sort(setdiff(traits$taxon, traits_original$`Traits with inferred values`$species))
+#>  [1] "Amazona martinicana"        "Amazona violacea"          
+#>  [3] "Ara tricolor"               "Conuropsis carolinensis"   
+#>  [5] "Cyanoramphus ulietanus"     "Cyanoramphus zealandicus"  
+#>  [7] "Eclectus infectus"          "Lophopsittacus bensoni"    
+#>  [9] "Lophopsittacus mauritianus" "Mascarinus mascarin"       
+#> [11] "Necropsittacus rodricanus"  "Nestor productus"          
+#> [13] "Psephotellus pulcherrimus"  "Psittacara labati"         
+#> [15] "Psittacula exsul"           "Psittacula wardi"
 ```
 
 ## Citations
 
-**To cite the Parrot Traits database or companion R package ()**
+**To cite this R package and explicitly updated versions of the Parrot
+Traits database, please use:**
 
-    #> 
-    #>   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,
-    #>   Klingbeil, B. T., Presley, S. J., & Willig, M. R. (2019).
-    #>   Phylogenetic supertree and functional trait database for all extant
-    #>   parrots. Data in brief, 24, 103882.
-    #> 
-    #> A BibTeX entry for LaTeX users is
-    #> 
-    #>   @Article{,
-    #>     title = {Phylogenetic supertree and functional trait database for all extant parrots.},
-    #>     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and & Willig and M. R.},
-    #>     journal = {Data in brief},
-    #>     year = {2019},
-    #>     volume = {24},
-    #>     number = {103882},
-    #>     url = {https://www.sciencedirect.com/science/article/pii/S2352340919302331},
-    #>   }
-    #> 
-    #>   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for
-    #>   interfacing with the Parrot Traits Database
-    #> 
-    #> A BibTeX entry for LaTeX users is
-    #> 
-    #>   @Misc{,
-    #>     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},
-    #>     author = {{Burnett} and {J.L.} and K.R. Burgio},
-    #>     url = {https://github.com/trashbirdecology/parrottraits/},
-    #>   }
+``` r
+citation("parrottraits")[2]
+#> 
+#>   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for
+#>   interfacing with the Parrot Traits Database
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{,
+#>     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},
+#>     author = {{Burnett} and {J.L.} and K.R. Burgio},
+#>     url = {https://github.com/trashbirdecology/parrottraits/},
+#>   }
+```
+
+**To cite the originally published Parrot Traits database and any
+subsequent versions, please use:**
+
+``` r
+citation("parrottraits")[1]
+#> 
+#>   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,
+#>   Klingbeil, B. T., Presley, S. J., & Willig, M. R. (2019).
+#>   Phylogenetic supertree and functional trait database for all extant
+#>   parrots. Data in brief, 24, 103882.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Article{,
+#>     title = {Phylogenetic supertree and functional trait database for all extant parrots.},
+#>     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and & Willig and M. R.},
+#>     journal = {Data in brief},
+#>     year = {2019},
+#>     volume = {24},
+#>     number = {103882},
+#>     url = {https://www.sciencedirect.com/science/article/pii/S2352340919302331},
+#>   }
+```
 
 ## Installation
 
@@ -71,14 +99,14 @@ Install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("trashbirdecology/parrottraits", force=FALSE)
+# devtools::install_github("trashbirdecology/parrottraits", force=FALSE)
 ```
 
 ## Code of Conduct
 
 Please note that the parrottraits project is released with a
 [Contributor Code of
-Conduct](https://trashbirdecology.github.io/parrottraits//CODE_OF_CONDUCT.html).
+Conduct](https://github.com/trashbirdecology/parrottraits/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
 
 ## USGS Disclaimers

@@ -17,6 +17,6 @@ data(traits)
 }
 \description{
 A comprehensive and curated dataset containing all known and credible traits for parrot species worldwide.
-Taxonomic information used to define and identify individual species is _____
+This trait database contains information for 16 species not available in the original dataset (Burigo et al. 2018).
 }
 \keyword{datasets}

@@ -11,11 +11,11 @@ A list containing two data frames (tibble): 'Traits with inferred values' and 'T
 \url{https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6}
 }
 \usage{
-data(""traits_original")
+data("traits_original")
 }
 \description{
 This data object contains a list comprising the two traits dataframes, one with and the other without the author-inferred values. These data are obtained directly from the original and static instance of the Burgio et al. Parrot Traits database.
-Description as published in [FigShare](https://ndownloader.figshare.com/articles/5877324?private_link=6cdf8cf00793deab7ba6):
+Description as published in Burgio et al. (2018)
 "We present a complete dataset from the literature on functional traits including morphological measurements, dietary information, foraging strategy, and foraging location for all 398 extant species of parrots. The morphological measurements include: mass as well as total length, wing chord, culmen, tarsus, and tail length. The diet data describe whether each species is known to consume particular food items (e.g. nectar, berries, and carrion), foraging strategy data describes how each species captures or accesses food, and foraging location describes the habitat from which each species finds food (e.g. ground, canopy, and subcanopy). We also present a time-calibrated phylogenetic supertree that contains all 398 extant species as well as 15 extinct species (413 total species)."
 }
 \keyword{datasets}

@@ -2,6 +2,7 @@
 #' @description  Helper function for downloading the Burgio data directly to file
 #' @return Downloads and unzips .zip archive from the Burgio published data at Figshare. Saves to dir
 #' @param dir Where to save the .zip and all unpacked files. Defaults to /data-raw/temp/
+#' @importFrom utils download.file unzip
 
 get_burgio_published_data <- function(dir = "data-raw/temp"){
 ## retrieve the published traits database to note what's changed sincepublication
