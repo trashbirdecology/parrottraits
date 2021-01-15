@@ -2,7 +2,9 @@ Package: parrottraits
 Type: Package
 Title: Retrieving and Interacting with the Ultimate Parrot Traits Database 
 Version: 0.0.1
-Author: Jessica Burnett, K.R. Burgio
+Authors@R: c(
+    person("Jessica", "Burnett", email = "jburnett@usgs.gov", role = "cre"),
+    person("Kevin", "Burgio", role = "ctr"))
 Maintainer: Jessica Burnett <jburnett@usgs.gov>
 Description: This package provides a curated and iteratively updated version of the Parrot Traits Database and provides simple functions for munging, summarising, and visualizing the data.
 License: CC0
