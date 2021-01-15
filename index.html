@@ -46,6 +46,9 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -67,68 +70,86 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<p><a href="https://github.com/trashbirdecology/parrottraits/actions"><img src="https://github.com/trashbirdecology/parrottraits/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" class="uri">https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg</a> <!-- badges: end --></p>
+<p><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"><!-- badges: end --></p>
 <div id="about" class="section level2">
 <h2 class="hasAnchor">
 <a href="#about" class="anchor"></a>About</h2>
 <p>The parrottraits R package provides the Parrot Trait Database, originally published in Burgio et al. (2018), as an internal data object, and provides minimal functionality for munging, visualizing, and interfacing with the data.</p>
-<p>Planned functionality for {code{parrottraits}} includes:<br>
-- simple statistics and visualizations of both the traits database the phylogenetic supertree, as originally published in Burio et al. (2018) - simple visualizations of trait distribution - spatial distribution of traits over space - integrating the taxonomic information used in the traits dataabase and supertree with other taxonomies</p>
+<p>Future functionality for {code{parrottraits}} includes:<br>
+- simple statistics and visualizations of both the traits database the phylogenetic supertree, as originally published in Burio et al. (2018) - simple visualizations of trait distribution - distribution of traits over space - integrating the taxonomic information used in the traits dataabase and supertree with other taxonomies</p>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<p>Load data objects into the workspace:</p>
+<p>Load the most current version of the Parrot Traits database into workspace:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"traits"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">traits</span><span class="op">)</span>
-<span class="co">#&gt; [1] 414 180</span></code></pre></div>
+<span class="co"># str(traits)</span></code></pre></div>
+<p>This package defaults to the most recent version of the Parrot Traits database (“traits”), which contains species that are not available in the original data.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># load the originallly published data</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"traits_original"</span><span class="op">)</span>
+<span class="co"># see which species in the most recent version of "traits" were not originally published</span>
+<span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">traits</span><span class="op">$</span><span class="va">taxon</span>, <span class="va">traits_original</span><span class="op">$</span><span class="va">`Traits with inferred values`</span><span class="op">$</span><span class="va">species</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt;  [1] "Amazona martinicana"        "Amazona violacea"          </span>
+<span class="co">#&gt;  [3] "Ara tricolor"               "Conuropsis carolinensis"   </span>
+<span class="co">#&gt;  [5] "Cyanoramphus ulietanus"     "Cyanoramphus zealandicus"  </span>
+<span class="co">#&gt;  [7] "Eclectus infectus"          "Lophopsittacus bensoni"    </span>
+<span class="co">#&gt;  [9] "Lophopsittacus mauritianus" "Mascarinus mascarin"       </span>
+<span class="co">#&gt; [11] "Necropsittacus rodricanus"  "Nestor productus"          </span>
+<span class="co">#&gt; [13] "Psephotellus pulcherrimus"  "Psittacara labati"         </span>
+<span class="co">#&gt; [15] "Psittacula exsul"           "Psittacula wardi"</span></code></pre></div>
 </div>
 <div id="citations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#citations" class="anchor"></a>Citations</h2>
-<p><strong>To cite the Parrot Traits database or companion R package ()</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#&gt;   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#&gt;   Klingbeil, B. T., Presley, S. J., &amp; Willig, M. R. (2019).</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">#&gt;   Phylogenetic supertree and functional trait database for all extant</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">#&gt;   parrots. Data in brief, 24, 103882.</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">#&gt; </span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">#&gt; </span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co">#&gt;   @Article{,</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co">#&gt;     title = {Phylogenetic supertree and functional trait database for all extant parrots.},</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co">#&gt;     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and &amp; Willig and M. R.},</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co">#&gt;     journal = {Data in brief},</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co">#&gt;     year = {2019},</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt;     volume = {24},</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="co">#&gt;     number = {103882},</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="co">#&gt;     url = {https://www.sciencedirect.com/science/article/pii/S2352340919302331},</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co">#&gt;   }</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co">#&gt; </span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co">#&gt;   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">#&gt;   interfacing with the Parrot Traits Database</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="co">#&gt; </span></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a><span class="co">#&gt; </span></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="co">#&gt;   @Misc{,</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="co">#&gt;     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="co">#&gt;     author = {{Burnett} and {J.L.} and K.R. Burgio},</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co">#&gt;     url = {https://github.com/trashbirdecology/parrottraits/},</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a><span class="co">#&gt;   }</span></span></code></pre></div>
+<p><strong>To cite this R package and explicitly updated versions of the Parrot Traits database, please use:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"parrottraits"</span><span class="op">)</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for</span>
+<span class="co">#&gt;   interfacing with the Parrot Traits Database</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; A BibTeX entry for LaTeX users is</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   @Misc{,</span>
+<span class="co">#&gt;     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},</span>
+<span class="co">#&gt;     author = {{Burnett} and {J.L.} and K.R. Burgio},</span>
+<span class="co">#&gt;     url = {https://github.com/trashbirdecology/parrottraits/},</span>
+<span class="co">#&gt;   }</span></code></pre></div>
+<p><strong>To cite the originally published Parrot Traits database and any subsequent versions, please use:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"parrottraits"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,</span>
+<span class="co">#&gt;   Klingbeil, B. T., Presley, S. J., &amp; Willig, M. R. (2019).</span>
+<span class="co">#&gt;   Phylogenetic supertree and functional trait database for all extant</span>
+<span class="co">#&gt;   parrots. Data in brief, 24, 103882.</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; A BibTeX entry for LaTeX users is</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   @Article{,</span>
+<span class="co">#&gt;     title = {Phylogenetic supertree and functional trait database for all extant parrots.},</span>
+<span class="co">#&gt;     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and &amp; Willig and M. R.},</span>
+<span class="co">#&gt;     journal = {Data in brief},</span>
+<span class="co">#&gt;     year = {2019},</span>
+<span class="co">#&gt;     volume = {24},</span>
+<span class="co">#&gt;     number = {103882},</span>
+<span class="co">#&gt;     url = {https://www.sciencedirect.com/science/article/pii/S2352340919302331},</span>
+<span class="co">#&gt;   }</span></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Install the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"trashbirdecology/parrottraits"</span>, force<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<span class="co"># devtools::install_github("trashbirdecology/parrottraits", force=FALSE)</span></code></pre></div>
 </div>
 <div id="code-of-conduct" class="section level2">
 <h2 class="hasAnchor">
 <a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
-<p>Please note that the parrottraits project is released with a <a href="https://trashbirdecology.github.io/parrottraits//CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the parrottraits project is released with a <a href="https://github.com/trashbirdecology/parrottraits/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 <div id="usgs-disclaimers" class="section level2">
 <h2 class="hasAnchor">
