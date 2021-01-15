@@ -18,7 +18,7 @@ library(parrottraits)
 ![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 <!-- badges: end --> 
 
-## About  
+## About   
 
 The R package, \code{parrottraits}, provides quick access to the most recent version of the Parrot Traits Database, originally published in [Burgio et al. (2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331), and also includes the originally published version. The Parrot Traits Database will be updated as new information becomes available. All are welcome to contribute new functional trait information, or suggest edits as necessary. For information on functional data collection and phylogenetic super tree estimation, please see the [superceding data article, Burgio et al. (2018)](https://www.sciencedirect.com/science/article/pii/S2352340919302331). 
 

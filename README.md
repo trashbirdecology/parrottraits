@@ -76,14 +76,14 @@ Traits database, please use:**
 ``` r
 citation("parrottraits")[2]
 #> 
-#>   Burnett, J.L. and K.R. Burgio. parrottraits: an R package for
-#>   interfacing with the Parrot Traits Database
+#>   Jessica L. Burnett and Kevin R. Burgio. `parrottraits`: an R package
+#>   for interfacing with the Parrot Traits Database
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Misc{,
 #>     title = {parrottraits: an R package for interfacing with the Parrot Traits Database},
-#>     author = {{Burnett} and {J.L.} and K.R. Burgio},
+#>     author = {Jessica L Burnett and Kevin R Burgio},
 #>     url = {https://github.com/trashbirdecology/parrottraits/},
 #>   }
 ```
@@ -94,16 +94,17 @@ subsequent versions, please use:**
 ``` r
 citation("parrottraits")[1]
 #> 
-#>   Burgio, K. R., Davis, K. E., Dreiss, L. M., Cisneros, L. M.,
-#>   Klingbeil, B. T., Presley, S. J., & Willig, M. R. (2019).
+#>   Kevin R. Burgio, Katie E. Davis, Lindsay M. Dreiss, Laura M.
+#>   Cisneros, Brian T. Klingbeil, Steven J. Presley, Michael R. Willig,
 #>   Phylogenetic supertree and functional trait database for all extant
-#>   parrots. Data in brief, 24, 103882.
+#>   parrots, Data in Brief, 2019, 103882, ISSN 2352-3409,
+#>   https://doi.org/10.1016/j.dib.2019.103882.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Article{,
 #>     title = {Phylogenetic supertree and functional trait database for all extant parrots.},
-#>     author = {{Burgio} and K. R. and {Davis} and K. E. and {Dreiss} and L. M. and {Cisneros} and L. M. and {Klingbeil} and B. T. and {Presley} and S. J. and & Willig and M. R.},
+#>     author = {K R Burgio and K E Davis and L M Dreiss and L M Cisneros and B T Klingbeil and S J Presley and M R Willig},
 #>     journal = {Data in brief},
 #>     year = {2019},
 #>     volume = {24},
